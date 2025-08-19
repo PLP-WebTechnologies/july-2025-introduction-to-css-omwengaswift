@@ -1,199 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BrightPath Tutoring</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+<head>
+  <meta charset="UTF-8">
+  <title>BrightPath Tutoring</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>BrightPath Tutoring</h1>
+    <p class="tagline">Helping students shine through learning</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <header class="site-header">
-      <div class="container">
-        <div class="brand">
-          <div class="logo" aria-hidden="true">BP</div>
-          <div class="brand-text">
-            <h1>BrightPath Tutoring</h1>
-            <p class="tagline">Personalized learning for every student</p>
-          </div>
-        </div>
-        <nav class="site-nav" aria-label="Main navigation">
-          <ul>
-            <li><a href="#subjects">Subjects</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#contact" class="btn btn--sm">Contact</a></li>
-          </ul>
-        </nav>
+  <main>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        At BrightPath Tutoring, we provide personalized lessons to help students
+        build confidence, understand difficult concepts, and succeed in school.
+      </p>
+    </section>
+
+    <section id="subjects">
+      <h2>Subjects We Offer</h2>
+      <div class="card">📘 Mathematics — Algebra, Geometry, Calculus</div>
+      <div class="card">🔬 Science — Physics, Chemistry, Biology</div>
+      <div class="card">📝 Languages — English, Swahili, French</div>
+    </section>
+
+    <section id="pricing">
+      <h2>Pricing</h2>
+      <div class="price-card">
+        <h3>Standard Plan</h3>
+        <p>KES 1,500 per hour</p>
+        <p>Includes homework help and test preparation</p>
       </div>
-    </header>
-
-    <main id="main">
-      <section class="hero">
-        <div class="container">
-          <div class="hero__content">
-            <h2>Boost confidence. Master concepts. Love learning.</h2>
-            <p>
-              One‑to‑one and small‑group lessons in Math, Science, and Languages,
-              tailored to your goals with clear progress tracking.
-            </p>
-            <div class="hero__actions">
-              <a href="#contact" class="btn">Book a free consult</a>
-              <a href="#subjects" class="btn btn--outline">Explore subjects</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="subjects" class="section section--tint">
-        <div class="container">
-          <header class="section__header">
-            <h3>Popular Subjects</h3>
-            <p>Structured lessons with practice, feedback, and review.</p>
-          </header>
-
-          <div class="grid">
-            <article class="card">
-              <h4>Mathematics</h4>
-              <p>Algebra, Calculus, Probability, Discrete prep.</p>
-              <a class="link" href="#contact">Start Math</a>
-            </article>
-
-            <article class="card">
-              <h4>Sciences</h4>
-              <p>Physics, Chemistry, Biology with lab‑style explanations.</p>
-              <a class="link" href="#contact">Start Science</a>
-            </article>
-
-            <article class="card">
-              <h4>Languages</h4>
-              <p>English writing, Literature, Swahili, and French basics.</p>
-              <a class="link" href="#contact">Start Languages</a>
-            </article>
-
-            <article class="card">
-              <h4>Study Skills</h4>
-              <p>Revision plans, note‑taking, and exam strategies.</p>
-              <a class="link" href="#contact">Improve Skills</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="section">
-        <div class="container">
-          <div class="split">
-            <div>
-              <h3>How we teach</h3>
-              <ul class="list-check">
-                <li>Short concept blocks with immediate practice</li>
-                <li>Clear goals and weekly progress summaries</li>
-                <li>Friendly tutors who adapt to your pace</li>
-              </ul>
-            </div>
-            <div class="info-box">
-              <h4>Session Snapshot</h4>
-              <p class="muted">This box intentionally shows the CSS Box Model:</p>
-              <div class="box-demo">
-                <div class="box-demo__inner">
-                  Content
-                </div>
-              </div>
-              <p class="small">
-                The outer purple border, teal padding, and gray margin make spacing
-                and sizing obvious.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="pricing" class="section section--tint">
-        <div class="container">
-          <header class="section__header">
-            <h3>Simple Pricing</h3>
-            <p>Transparent plans with no surprises.</p>
-          </header>
-
-          <div class="grid grid--3">
-            <article class="card card--outlined">
-              <h4>Starter</h4>
-              <p class="price">KES 800 <span class="per">/ hr</span></p>
-              <ul class="feature-list">
-                <li>1:1 tutoring</li>
-                <li>Homework support</li>
-                <li>Email summaries</li>
-              </ul>
-              <a href="#contact" class="btn btn--block">Choose Starter</a>
-            </article>
-
-            <article class="card card--outlined">
-              <h4>Focused</h4>
-              <p class="price">KES 1,800 <span class="per">/ 4 hrs</span></p>
-              <ul class="feature-list">
-                <li>Goal‑based plan</li>
-                <li>Practice sets</li>
-                <li>Progress tracking</li>
-              </ul>
-              <a href="#contact" class="btn btn--block">Choose Focused</a>
-            </article>
-
-            <article class="card card--outlined">
-              <h4>Exam Prep</h4>
-              <p class="price">KES 4,500 <span class="per">/ 12 hrs</span></p>
-              <ul class="feature-list">
-                <li>Mock tests</li>
-                <li>Targeted reviews</li>
-                <li>Parent updates</li>
-              </ul>
-              <a href="#contact" class="btn btn--block">Choose Exam Prep</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section">
-        <div class="container narrow">
-          <header class="section__header">
-            <h3>Get in touch</h3>
-            <p>Tell us your goals. We’ll suggest a plan within 24 hours.</p>
-          </header>
-
-          <form class="contact-form" aria-label="Contact form" onsubmit="return false">
-            <div class="form-row">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" placeholder="Enter your name" />
-            </div>
-            <div class="form-row">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="Enter your email" />
-            </div>
-            <div class="form-row">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="How can we help?"></textarea>
-            </div>
-            <div class="form-actions">
-              <button class="btn">Send message</button>
-              <span class="muted small">Demo form.</span>
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>&copy; <span id="year">2025</span> BrightPath Tutoring</p>
-        <nav aria-label="Footer">
-          <ul class="inline-links">
-            <li><a href="#subjects">Subjects</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+      <div class="price-card">
+        <h3>Exam Prep Plan</h3>
+        <p>KES 5,000 for 4 sessions</p>
+        <p>Focused study for upcoming exams</p>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: tutor@example.com</p>
+      <p>Phone: +254 700 123 456</p>
+      <p>We’d love to hear from you! Reach out to schedule your first session.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BrightPath Tutoring. All rights reserved.</p>
+  </footer>
+</body>
 </html>
