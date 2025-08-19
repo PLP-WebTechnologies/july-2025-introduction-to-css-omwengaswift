@@ -1,0 +1,349 @@
+/* ===============================
+   BrightPath Tutoring — styles.css
+   Focus: basic properties + Box Model.
+==================================*/
+
+/* 1) Base + reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Make width/height include padding & border */
+}
+
+:root {
+  --bg: #f7f7fb;
+  --surface: #ffffff;
+  --tint: #f2f6ff;
+  --ink: #1c1c22;
+  --muted: #606274;
+  --brand: #3b82f6;
+  --brand-ink: #163b7a;
+  --border: #e5e7eb;
+  --card-border: #e2e8f0;
+  --success: #059669;
+  --shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0; /* remove default margin to control layout explicitly */
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: var(--ink);
+  background: linear-gradient(180deg, var(--bg), #fff);
+  line-height: 1.6;
+}
+
+/* 2) Utilities & global elements */
+.container {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding: 1.25rem;
+}
+
+.narrow {
+  max-width: 720px;
+}
+
+.section {
+  padding-block: 4rem;
+}
+
+.section--tint {
+  background: var(--tint);
+}
+
+.section__header {
+  margin-bottom: 1.5rem;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.25;
+  margin: 0 0 .5rem 0;
+}
+
+p {
+  margin: 0 0 1rem 0;
+  color: var(--muted);
+}
+
+.small { font-size: 0.9rem; }
+.muted { color: var(--muted); }
+
+/* 3) Header & navigation */
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--brand);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 700;
+  border: 3px solid var(--brand-ink);
+  box-shadow: var(--shadow);
+}
+
+.brand h1 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.tagline {
+  margin: 0;
+  font-size: .9rem;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: .75rem;
+  padding: 0;  /* remove default ul padding */
+  margin: 0;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--ink);
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+  border: 1px solid transparent;
+}
+
+.site-nav a:hover {
+  border-color: var(--border);
+  background: #fff;
+}
+
+/* 4) Buttons */
+.btn {
+  display: inline-block;
+  padding: .75rem 1rem;
+  border-radius: .75rem;
+  background: var(--brand);
+  color: #fff;
+  border: 2px solid var(--brand);
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+}
+
+.btn:hover { background: var(--brand-ink); border-color: var(--brand-ink); }
+.btn--outline { background: transparent; color: var(--brand-ink); border-color: var(--brand-ink); }
+.btn--sm { padding: .5rem .75rem; font-size: .9rem; }
+.btn--block { display: block; text-align: center; width: 100%; }
+
+/* 5) Hero */
+.hero {
+  background: radial-gradient(60rem 20rem at right -10rem top, #eaf2ff, transparent),
+              radial-gradient(55rem 18rem at left -5rem top, #f8faff, transparent);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero__content {
+  padding-block: 3rem;
+  max-width: 760px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: .75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+/* 6) Cards and grids */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem; /* outer spacing between boxes */
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 800px) {
+  .grid, .grid--3 { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.card--outlined {
+  border: 2px solid var(--brand-ink);
+}
+
+.card h4 { margin-bottom: .25rem; }
+.card .link {
+  display: inline-block;
+  margin-top: .5rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--brand-ink);
+  border-bottom: 2px solid var(--brand-ink);
+  padding-bottom: 2px;
+}
+
+/* 7) Split layout */
+.split {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .split { grid-template-columns: 1fr; }
+}
+
+/* 8) Box Model demo */
+.info-box {
+  background: #fff;
+  border: 1px dashed var(--card-border);
+  padding: 1rem;
+  border-radius: .75rem;
+  box-shadow: var(--shadow);
+}
+
+.box-demo {
+  background: #e5e7eb;      /* margin area visible around inner box */
+  padding: 12px;            /* outer padding */
+  border: 4px solid rebeccapurple;
+  border-radius: .5rem;
+  margin-block: .5rem 1rem; /* margin separates from text above/below */
+}
+
+.box-demo__inner {
+  background: #ccfbf1;      /* inner content background */
+  border: 4px solid #0f766e;/* content border */
+  padding: 16px;            /* content padding */
+  text-align: center;
+  font-weight: 700;
+}
+
+/* 9) Pricing specifics */
+.price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin: .5rem 0 1rem;
+}
+
+.per { font-weight: 600; color: var(--muted); }
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.feature-list li {
+  padding: .25rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.feature-list li:last-child { border-bottom: 0; }
+
+/* 10) Form (no JS) */
+.contact-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.form-row {
+  display: grid;
+  gap: .25rem;
+  margin-bottom: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: .75rem;        /* inner spacing */
+  border-radius: .5rem;
+  border: 1px solid var(--card-border);
+  background: #fafafa;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+  background: #fff;
+}
+
+/* 11) Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.site-footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1.25rem;
+}
+
+.inline-links {
+  list-style: none;
+  display: flex;
+  gap: .75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.inline-links a {
+  text-decoration: none;
+  color: var(--brand-ink);
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+.inline-links a:hover { border-color: var(--brand-ink); }
+
+/* 12) Accessibility niceties */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: -999px;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: var(--brand-ink);
+  color: #fff;
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+}
